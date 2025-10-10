@@ -1,0 +1,167 @@
+:root {
+    --cor-principal: #E34C26; /* Cor Laranja do HTML */
+    --cor-secundaria: #F06529;
+    --cor-fundo: #f4f7f6;
+    --cor-texto: #333;
+    --cor-borda: #ddd;
+    --sombra-leve: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Press Start 2P', monospace;
+    background-image: url(../Imagens/img_fundo.PNG);
+    color: var(--cor-texto);
+    line-height: 1.6;
+}
+
+/* --- Cabeçalho --- */
+.cabecalho {
+    background-color: var(--cor-principal);
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    box-shadow: var(--sombra-leve);
+}
+
+.cabecalho h1 {
+    font-size: 2.5em;
+    margin-bottom: 5px;
+}
+
+.cabecalho p {
+    font-size: 1.1em;
+    opacity: 0.9;
+}
+
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.bloco-conteudo {
+    margin-bottom: 20px;
+    border: 1px solid var(--cor-borda);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    transition: box-shadow 0.3s ease;
+}
+
+.bloco-conteudo:hover {
+    box-shadow: var(--sombra-leve);
+}
+
+/* 1. O INPUT CHECKBOX (Sempre escondido) */
+.bloco-conteudo input[type="checkbox"] {
+    display: none;
+}
+
+/* 2. O LABEL (Título Clicável) */
+.barra-titulo {
+    background-color: #ffffff;
+    color: var(--cor-principal);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 18px 25px;
+    font-size: 1.2em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.barra-titulo:hover {
+    background-color: var(--cor-fundo);
+}
+
+.barra-titulo i.fas {
+    margin-right: 10px;
+    color: var(--cor-principal);
+}
+
+.icone-expansao {
+    margin-left: 15px;
+    transition: transform 0.3s;
+}
+
+/* 3. O CONTEÚDO (Inicialmente escondido) */
+.conteudo-escondido {
+    padding: 0 25px;
+    background-color: white;
+    max-height: 0; /* Colapsa o conteúdo */
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out;
+}
+
+.conteudo-escondido ul,
+.conteudo-escondido ol {
+    list-style-position: inside;
+    padding-left: 0;
+    padding-top: 10px;
+}
+
+.conteudo-escondido li {
+    margin-bottom: 10px;
+}
+
+.conteudo-escondido a {
+    color: var(--cor-principal);
+    text-decoration: none;
+}
+
+
+/* 1. Quando o checkbox está marcado, a label (o título) muda de cor */
+.bloco-conteudo input[type="checkbox"]:checked + .barra-titulo {
+    background-color: var(--cor-principal);
+    color: white;
+}
+
+.bloco-conteudo input[type="checkbox"]:checked + .barra-titulo i.fas {
+    color: white;
+}
+
+/* 2. Quando o checkbox está marcado, o ícone muda de + para - */
+.bloco-conteudo input[type="checkbox"]:checked + .barra-titulo .icone-expansao i.fa-plus {
+    display: none; /* Esconde o + */
+}
+
+.bloco-conteudo input[type="checkbox"]:checked + .barra-titulo .icone-expansao i.fa-minus {
+    display: inline; /* Mostra o - */
+}
+
+/* 3. Quando o checkbox está marcado, o elemento imediatamente posterior (o conteúdo) é expandido */
+.bloco-conteudo input[type="checkbox"]:checked ~ .conteudo-escondido {
+    max-height: 400px; /* Um valor grande o suficiente para acomodar o conteúdo */
+    padding: 25px; /* Adiciona o padding para o conteúdo aparecer */
+}
+
+/* Oculta o ícone de - por padrão (aparecerá apenas quando checked) */
+.icone-expansao i.fa-minus {
+    display: none;
+}
+
+
+/* Responsividade Básica */
+@media (max-width: 600px) {
+    .cabecalho h1 {
+        font-size: 1.8em;
+    }
+    .barra-titulo {
+        font-size: 1.1em;
+        padding: 15px 20px;
+    }
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+}

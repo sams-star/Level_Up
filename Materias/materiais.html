@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprenda HTML (CSS Externo)</title>
+    <link rel="stylesheet" href="materiais.css">
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap">
+</head>
+<body>
+
+    <header class="cabecalho">
+        <h1> Aprenda HTML: O Básico ao Avançado</h1>
+        <p>Seu guia simples e direto para dominar a espinha dorsal da web. (Puro HTML/CSS)</p>
+    </header>
+
+    <main class="container">
+        <div class="bloco-conteudo">
+            <input type="checkbox" id="toggle-videos">
+            
+            <label for="toggle-videos" class="barra-titulo">
+                <i class="fas fa-video"></i> Vídeos Explicativos de HTML
+                <span class="icone-expansao">
+                    <i class="fas fa-plus"></i>
+                    <i class="fas fa-minus"></i>
+                </span>
+            </label>
+            
+            <div class="conteudo-escondido">
+                <ul>
+                    <li><a href="#" target="_blank">Introdução ao HTML5 (Estrutura Básica)</a></li>
+                    <li><a href="#" target="_blank">Aprenda sobre Tags Semânticas</a></li>
+                    <li><a href="#" target="_blank">Criando Formulários com HTML</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="bloco-conteudo">
+            <input type="checkbox" id="toggle-links">
+            <label for="toggle-links" class="barra-titulo">
+                <i class="fas fa-link"></i> Links e Referências Úteis
+                <span class="icone-expansao">
+                    <i class="fas fa-plus"></i>
+                    <i class="fas fa-minus"></i>
+                </span>
+            </label>
+            <div class="conteudo-escondido">
+                <ol>
+                    <li><a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML" target="_blank">MDN Web Docs (Referência Completa)</a></li>
+                    <li><a href="https://www.w3schools.com/html/" target="_blank">W3Schools (Tutoriais Práticos)</a></li>
+                    <li><a href="https://html.spec.whatwg.org/multipage/" target="_blank">Especificação Oficial do HTML</a></li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="bloco-conteudo">
+            <input type="checkbox" id="toggle-pdfs">
+            <label for="toggle-pdfs" class="barra-titulo">
+                <i class="fas fa-file-pdf"></i> Material em PDF para Download
+                <span class="icone-expansao">
+                    <i class="fas fa-plus"></i>
+                    <i class="fas fa-minus"></i>
+                </span>
+            </label>
+            <div class="conteudo-escondido">
+                <p>Clique nos links abaixo para baixar o material de apoio:</p>
+                <ul>
+                    <li><a href="#" target="_blank" download>Guia Rápido de Tags HTML Essenciais.pdf</a></li>
+                    <li><a href="#" target="_blank" download>Cheatsheet HTML5 - Para Imprimir.pdf</a></li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>
