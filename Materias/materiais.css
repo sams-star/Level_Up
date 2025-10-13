@@ -45,14 +45,12 @@ body {
 }
 
 .bloco-conteudo {
-    margin-bottom: 20px;
-    margin-top: 40px;
+    margin-top: 70px;
     border: 1px solid var(--cor-borda);
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
     transition: box-shadow 0.3s ease;
-    padding:20px;
 }
 
 .bloco-conteudo:hover {
@@ -170,4 +168,5 @@ img{
 .info{
     float: right;
     margin-right: 100px;
+    margin-top: 70px;
 }
