@@ -1,5 +1,5 @@
 :root {
-    --cor-principal: #E34C26; /* Cor Laranja do HTML */
+    --cor-principal: #E34C26; 
     --cor-secundaria: #F06529;
     --cor-fundo: #f4f7f6;
     --cor-texto: #333;
@@ -15,12 +15,11 @@
 
 body {
     font-family: 'Press Start 2P', monospace;
-    background-image: url(../Imagens/img_fundo.PNG);
+    background-image: url(./Imagens/img_fundo.PNG);
     color: var(--cor-texto);
     line-height: 1.6;
 }
 
-/* --- Cabeçalho --- */
 .cabecalho {
     background-color: var(--cor-principal);
     color: white;
@@ -47,11 +46,13 @@ body {
 
 .bloco-conteudo {
     margin-bottom: 20px;
+    margin-top: 40px;
     border: 1px solid var(--cor-borda);
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
     transition: box-shadow 0.3s ease;
+    padding:20px;
 }
 
 .bloco-conteudo:hover {
@@ -164,4 +165,9 @@ img{
     max-width: 100%;
     height: auto;
     display: block;
+}
+
+.info{
+    float: right;
+    margin-right: 100px;
 }

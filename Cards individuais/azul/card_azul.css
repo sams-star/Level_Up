@@ -1,7 +1,7 @@
 body {
   margin: 0;
   height: 100vh;
-  background: url("../../Imagens/paisagem_az.gif") center/cover no-repeat;
+  background: url("../../Imagens/paisagens/paisagem_az.gif") center/cover no-repeat;
   font-family: 'Press Start 2P', monospace; 
   display: flex;
   justify-content: center;
