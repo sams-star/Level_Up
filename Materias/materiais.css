@@ -21,6 +21,20 @@ body {
     color: var(--cor-texto);
     line-height: 1.6;
 }
+.imagem-lateral {
+    bottom: 85%;
+    left: 10%;
+   
+
+  
+}
+
+.imagem-lateral img {
+    max-width: 8%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+}
 
 .cabecalho {
     background-color: var(--cor-principal);
@@ -48,7 +62,7 @@ body {
     margin-right: 100px;
 }
 
-}
+
 
 .bloco-conteudo {
     margin-bottom: 20px;
@@ -58,7 +72,7 @@ body {
     overflow: hidden;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
     transition: box-shadow 0.3s ease;
-    padding:200px;
+    padding:20px;
 }
 
 .bloco-conteudo:hover {
@@ -165,10 +179,4 @@ body {
         font-size: 1.1em;
         padding: 15px 20px;
     }
-}
-
-img{
-    max-width: 100%;
-    height: auto;
-    display: block;
 }
