@@ -1,9 +1,6 @@
 :root {
-<<<<<<< HEAD
     --cor-principal: #E34C26;
-=======
     --cor-principal: #E34C26; 
->>>>>>> fc049b08374b5ce71e1b3ce3f79a6172beea98a0
     --cor-secundaria: #F06529;
     --cor-fundo: #f4f7f6;
     --cor-texto: #333;
@@ -19,11 +16,8 @@
 
 body {
     font-family: 'Press Start 2P', monospace;
-<<<<<<< HEAD
-    background-color: #c2caa6;
-=======
-    background-image: url(./Imagens/img_fundo.PNG);
->>>>>>> fc049b08374b5ce71e1b3ce3f79a6172beea98a0
+    background-color: #fcfbf1;
+    background-image: url(../Imagens/nuvens.gif);
     color: var(--cor-texto);
     line-height: 1.6;
 }
@@ -50,6 +44,10 @@ body {
     max-width: 900px;
     margin: 40px auto;
     padding: 0 20px;
+    float: right;
+    margin-right: 100px;
+}
+
 }
 
 .bloco-conteudo {
@@ -60,7 +58,7 @@ body {
     overflow: hidden;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
     transition: box-shadow 0.3s ease;
-    padding:20px;
+    padding:200px;
 }
 
 .bloco-conteudo:hover {
@@ -173,9 +171,4 @@ img{
     max-width: 100%;
     height: auto;
     display: block;
-}
-
-.info{
-    float: right;
-    margin-right: 100px;
 }
