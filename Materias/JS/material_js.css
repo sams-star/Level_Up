@@ -1,8 +1,6 @@
 :root {
-    --cor-principal: #E34C26;
-    --cor-principal: #E34C26; 
-    --cor-secundaria: #F06529;
-    --cor-fundo: #f4f7f6;
+    --cor-principal: #c0a144;
+    --cor-fundo: #b69c76;
     --cor-texto: #333;
     --cor-borda: #ddd;
     --sombra-leve: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -17,15 +15,15 @@
 body {
     font-family: 'Press Start 2P', monospace;
     background-color: #fcfbf1;
-    background-image: url(../Imagens/nuvens.gif);
+    background-image: url(../../Imagens/nuvens.gif);
     color: var(--cor-texto);
     line-height: 1.6;
 }
 .imagem-lateral {
     margin-bottom: 40px;
     position: fixed; 
-    top: 0%; 
-    transform: translateY(0%); 
+    top: 30%; 
+    transform: tr10anslateY(0%); 
     transform: translateX(50%);
     
    
@@ -36,13 +34,13 @@ body {
 .imagem-lateral img {
     width: 45vh;;
     height: auto;
-    border-radius: 10px;
+    border-radius: 5%;
     box-shadow: 0 4px 10px rgba(0,0,0,0.25);
 }
 
 .cabecalho {
     background-color: var(--cor-principal);
-    color: white;
+    color: #97805e;
     padding: 40px 20px;
     text-align: center;
     box-shadow: var(--sombra-leve);

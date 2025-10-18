@@ -1,0 +1,206 @@
+:root {
+    --pine-bark: #352E1F;       /* Fundo Escuro Principal */
+    --soft-leather: #5E3D20;    /* Destaque de Botão Escuro */
+    --dull-chestnut: #94724A;   /* Sombra e Borda */
+    --windy-dunes: #CCB693;     /* Texto Claro e Fundo de Botão */
+    --olive-grove: #787350;     /* Fundo Suave do Body */
+    --deep-mahogany: #481911;   /* Destaque Principal (Hover) */
+    
+    --sombra-ilha: 0 15px 25px rgba(0, 0, 0, 0.5); /* Sombra para o efeito 3D flutuante */
+    --sombra-botao: 0 5px 0 var(--deep-mahogany); /* Sombra para efeito 3D do botão */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image:url(../Imagens/nuvens.gif);
+    font-family: 'Press Start 2P', monospace;
+    color: var(--windy-dunes);
+    min-height: 100vh;
+    line-height: 1.6;
+}
+
+
+
+.cabecalho {
+    background-color: var(--pine-bark); /* Cor de Casca de Pinheiro, Escura e Sólida */
+    padding: 40px 20px 20px;
+    text-align: center;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+    z-index: 10;
+    position: relative; /* Para garantir que a sombra fique visível */
+}
+
+.cabecalho h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: var(--windy-dunes);
+}
+
+.cabecalho p {
+    font-size: 0.8em;
+    opacity: 0.8;
+    margin-bottom: 30px;
+}
+
+.botoes-cabecalho {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.botao-flutuante {
+    /* Estilo "Pixel Art Button" */
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--windy-dunes);
+    color: var(--pine-bark);
+    text-decoration: none;
+    font-size: 0.7em;
+    border: 3px solid var(--deep-mahogany);
+    border-radius: 8px;
+    cursor: pointer;
+    text-transform: uppercase;
+    
+    /* Efeito 3D com sombra */
+    box-shadow: var(--sombra-botao);
+    position: relative;
+    top: 0;
+    transition: all 0.1s;
+}
+
+.botao-flutuante:hover {
+    background-color: white; 
+    color: var(--deep-mahogany);
+}
+
+.botao-flutuante:active {
+    /* Efeito de "clique" que abaixa o botão */
+    top: 5px;
+    box-shadow: 0 0 0 var(--deep-mahogany);
+}
+
+.botao-flutuante i.fas {
+    margin-right: 5px;
+}
+
+
+/* ================== MAPA DE ILHAS ================== */
+
+.container-mapa {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mapa-ilhas {
+    position: relative;
+    width: 100%;
+    min-height: 600px; /* Altura mínima para o "céu" do mapa */
+}
+
+/* Estilo para cada ilha flutuante */
+.ilha {
+    position: absolute;
+    display: block;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+
+ 
+    
+    /* Inicia a animação de flutuação */
+    animation: flutuar 4s infinite ease-in-out;
+}
+
+.ilha:hover {
+    transform: scale(1.1) translateY(0px) !important; /* Levanta a ilha no hover */
+    
+}
+
+.ilha img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+
+}
+
+/* Posicionamento e Tamanho das Ilhas (Criatividade!) */
+
+.ilha-1 { /* Ilha Flexbox */
+    width: 200px;
+    top: 30px;
+    left: 10%;
+    transform: translateY(0);
+    animation-delay: 0s;
+}
+
+.ilha-2 { /* Ilha Grid */
+    width: 250px;
+    top: 0px;
+    right: 5%;
+    transform: translateY(0);
+    animation-delay: 1.5s;
+}
+
+.ilha-3 { /* Ilha Animações */
+    width: 150px;
+    top: 250px;
+    left: 60%;
+    transform: translateY(0);
+    animation-delay: 3s;
+}
+
+.ilha-4 { /* Ilha Responsividade */
+    width: 180px;
+    top: 300px;
+    left: 30%;
+    transform: translateY(0);
+    animation-delay: 0.5s;
+}
+
+/* Keyframe para o efeito Flutuante */
+@keyframes flutuar {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+
+/* Responsividade Básica */
+@media (max-width: 768px) {
+    .cabecalho h1 {
+        font-size: 1.5em;
+    }
+    .botoes-cabecalho {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    /* Para telas menores, as ilhas são empilhadas e centralizadas */
+    .mapa-ilhas {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: auto;
+    }
+    
+    .ilha {
+        position: relative; /* Remove a posição absoluta */
+        margin-bottom: 40px;
+        width: 180px; /* Tamanho uniforme */
+        top: auto;
+        left: auto;
+        right: auto;
+    }
+}
