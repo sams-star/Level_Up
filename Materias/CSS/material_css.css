@@ -23,18 +23,26 @@ body {
     position: fixed; 
     top: 30%; 
     transform: translateY(0%); 
-    transform: translateX(50%);
-    
+    transform: translateX(30%);
+    animation: flutuarImagem 4s ease-in-out infinite;
    
 }
 
-
-
 .imagem-lateral img {
-    width: 45vh;;
+    width: 60vh;;
     height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+}
+
+@keyframes flutuarImagem {
+    0% {
+        transform: translateY(0%) translateX(30%); /* Posição inicial */
+    }
+    50% {
+        transform: translateY(-5%) translateX(30%); /* Sobe um pouco */
+    }
+    100% {
+        transform: translateY(0%) translateX(30%); /* Volta à posição inicial */
+    }
 }
 
 .cabecalho {

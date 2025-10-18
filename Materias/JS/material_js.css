@@ -1,6 +1,6 @@
 :root {
     --cor-principal: #c0a144;
-    --cor-fundo: #b69c76;
+    --cor-fundo: #97805e;
     --cor-texto: #333;
     --cor-borda: #ddd;
     --sombra-leve: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -25,17 +25,26 @@ body {
     top: 30%; 
     transform: tr10anslateY(0%); 
     transform: translateX(50%);
-    
-   
+     animation: flutuarImagem 4s ease-in-out infinite; 
 }
-
-
 
 .imagem-lateral img {
     width: 45vh;;
     height: auto;
     border-radius: 5%;
     box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+}
+
+@keyframes flutuarImagem {
+    0% {
+        transform: translateY(0%) translateX(30%); /* Posição inicial */
+    }
+    50% {
+        transform: translateY(-5%) translateX(30%); /* Sobe um pouco */
+    }
+    100% {
+        transform: translateY(0%) translateX(30%); /* Volta à posição inicial */
+    }
 }
 
 .cabecalho {
@@ -86,9 +95,9 @@ body {
     display: none;
 }
 
-/* 2. O LABEL (Título Clicável) */
+
 .barra-titulo {
-    background-color: #ffffff;
+    background-color: #97805e;
     color: var(--cor-principal);
     display: flex;
     justify-content: space-between;

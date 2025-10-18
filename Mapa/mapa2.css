@@ -103,7 +103,6 @@ body {
 .mapa-ilhas {
     position: relative;
     width: 100%;
-    min-height: 600px; /* Altura mínima para o "céu" do mapa */
 }
 
 /* Estilo para cada ilha flutuante */
@@ -121,7 +120,7 @@ body {
 }
 
 .ilha:hover {
-    transform: scale(1.1) translateY(0px) !important; /* Levanta a ilha no hover */
+    transform: scale(1.1) translateY(0px) !important; 
     
 }
 
@@ -132,17 +131,17 @@ body {
 
 }
 
-/* Posicionamento e Tamanho das Ilhas (Criatividade!) */
 
-.ilha-1 { /* Ilha Flexbox */
+
+.ilha-1 {
     width: 200px;
-    top: 30px;
+    top: 15px;
     left: 10%;
     transform: translateY(0);
     animation-delay: 0s;
 }
 
-.ilha-2 { /* Ilha Grid */
+.ilha-2 { 
     width: 250px;
     top: 0px;
     right: 5%;
@@ -150,23 +149,23 @@ body {
     animation-delay: 1.5s;
 }
 
-.ilha-3 { /* Ilha Animações */
+.ilha-3 { 
     width: 150px;
-    top: 250px;
+    top: 180px;
     left: 60%;
     transform: translateY(0);
     animation-delay: 3s;
 }
 
-.ilha-4 { /* Ilha Responsividade */
-    width: 180px;
-    top: 300px;
-    left: 30%;
+.ilha-4 { 
+    width: 250px;
+    top: 100px;
+    left: 35%;
     transform: translateY(0);
     animation-delay: 0.5s;
 }
 
-/* Keyframe para o efeito Flutuante */
+
 @keyframes flutuar {
     0%, 100% {
         transform: translateY(0px);

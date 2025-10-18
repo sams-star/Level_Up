@@ -1,7 +1,7 @@
 body {
   margin: 0;
   height: 100vh;
-  background-image: url("../../Imagens/HTML_CSS_JS.PNG"); /* sua primeira imagem */
+  background-image: url("../Imagens/fundodoscard.PNG"); 
   background-size: cover;
   background-position: center;
   display: flex;
@@ -24,17 +24,37 @@ body {
 }
 
 .foto {
-  max-width: 70%;       /* limita a largura sem distorcer */
-  max-height: 70%;      /* limita a altura para telas menores */
-  width: auto;
+  max-width: 70%;       
+  max-height: 70%;      
+  width: 50vh;
   height: auto;
-  border: 5px solid #111;
   border-radius: 10px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   object-fit: contain;  /* mantém proporção da imagem */
 }
 
 .foto:hover {
-  transform: scale(1.1);
+   transform: scale(1.1)translatez(100px);
   box-shadow: 0 0 25px rgba(0,0,0,0.4);
+}
+
+#samela{
+  background-color: #6b421e;
+  width: 200vh;
+  height: 85vh;;
+  transform: translateX(28%);
+}
+
+#sophia{
+  background-color: #501e14;
+  width: 150vh;
+  height: auto;
+  transform: translateX(18%);
+}
+
+#rebeca{
+  background-color: #91895e;
+  width: 150vh;
+  height: 85vh;
+  transform: translateX(15%);
 }

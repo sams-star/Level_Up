@@ -26,14 +26,24 @@ body {
     top: 30%; 
     transform: translateY(0%); 
     transform: translateX(50%);
-    
-   
+    animation: flutuarImagem 4s ease-in-out infinite;
 }
 
 .imagem-lateral img {
     width: 45vh;;
     height: auto;
   
+}
+@keyframes flutuarImagem {
+    0% {
+        transform: translateY(0%) translateX(30%); /* Posição inicial */
+    }
+    50% {
+        transform: translateY(-5%) translateX(30%); /* Sobe um pouco */
+    }
+    100% {
+        transform: translateY(0%) translateX(30%); /* Volta à posição inicial */
+    }
 }
 
 
