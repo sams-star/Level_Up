@@ -24,9 +24,14 @@ body {
 }
 
 .img-personagem {
-  width: 240px;
+  width: 600px;
   height: auto;
+  position: fixed; 
+  top: -10%;  
+  transform: translateX(-85%);
+   
 }
+
 
 .card {
   background-color: #6b421e;
