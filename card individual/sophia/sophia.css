@@ -5,6 +5,96 @@ body {
   color: #fff;
 }
 
+    .menu {
+        position: fixed;
+        top: 25px;
+        left: 25px;
+        z-index: 1000;
+    }   
+
+/* Checkbox invisível para controlar o menu */
+    #menu-toggle {
+        display: none;
+    }
+
+/* Botão principal (a bolinha com imagem) */
+    .menu-button {
+        display: block;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: 1px solid #0c0d0e;
+        cursor: pointer;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+        transition: transform 0.25s ease, box-shadow 0.25s ease;
+        background-image: url('../Level_Up/Imagens/personagem_rebeca.png'); 
+        background-size: cover; 
+        background-position: center; 
+
+}
+
+    .menu-button:hover {
+        transform: scale(1.1);
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    }
+
+/* Itens do menu flutuante */
+    .menu-options {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 90px;
+        left: 10px;
+        gap: 12px;
+        opacity: 0;
+        pointer-events: none;
+        transform: translateY(-10px);
+        transition: all 0.3s ease;
+    }
+
+/* Botões de opção */
+    .menu-options a {
+        background: #ffffff;
+        padding: 10px 18px;
+        border-radius: 25px;
+        text-decoration: none;
+        color: #352E1F;
+        font-family:'Press Start 2P', monospace;
+        font-weight: 600;
+        font-size: 15px;
+        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        transition: all 0.25s ease;
+}
+
+    .menu-options a:hover {
+        background: #501e14;
+        color: #3c3525;
+    }
+
+/* Quando o menu é clicado (checkbox ativo) */
+    #menu-toggle:checked + .menu-button + .menu-options {
+        opacity: 1;
+        pointer-events: auto;
+        transform: translateY(0);
+    }
+
+/* Animação suave de entrada para cada item */
+    #menu-toggle:checked + .menu-button + .menu-options a {
+        animation: slideIn 0.3s ease forwards;
+    }
+
+    @keyframes slideIn {
+        from {
+            opacity: 0;
+            transform: translateY(-10px);
+    }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+    }
+}
+
 .container {
   display: flex;
   align-items: center;

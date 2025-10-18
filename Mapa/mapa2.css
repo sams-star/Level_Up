@@ -1,13 +1,13 @@
 :root {
-    --pine-bark: #352E1F;       /* Fundo Escuro Principal */
-    --soft-leather: #5E3D20;    /* Destaque de Botão Escuro */
-    --dull-chestnut: #94724A;   /* Sombra e Borda */
-    --windy-dunes: #CCB693;     /* Texto Claro e Fundo de Botão */
-    --olive-grove: #787350;     /* Fundo Suave do Body */
-    --deep-mahogany: #481911;   /* Destaque Principal (Hover) */
+    --pine-bark: #352E1F;       
+    --soft-leather: #5E3D20;   
+    --dull-chestnut: #94724A;   
+    --windy-dunes: #CCB693;     
+    --olive-grove: #787350;   
+    --deep-mahogany: #481911;   
     
-    --sombra-ilha: 0 15px 25px rgba(0, 0, 0, 0.5); /* Sombra para o efeito 3D flutuante */
-    --sombra-botao: 0 5px 0 var(--deep-mahogany); /* Sombra para efeito 3D do botão */
+    --sombra-ilha: 0 15px 25px rgba(0, 0, 0, 0.5); 
+    --sombra-botao: 0 5px 0 var(--deep-mahogany); 
 }
 
 * {
@@ -25,9 +25,8 @@ body {
 }
 
 
-
 .cabecalho {
-    background-color: var(--pine-bark); /* Cor de Casca de Pinheiro, Escura e Sólida */
+    background-color: var(--pine-bark); 
     padding: 40px 20px 20px;
     text-align: center;
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
@@ -54,7 +53,6 @@ body {
 }
 
 .botao-flutuante {
-    /* Estilo "Pixel Art Button" */
     display: inline-block;
     padding: 10px 20px;
     background-color: var(--windy-dunes);
@@ -66,7 +64,7 @@ body {
     cursor: pointer;
     text-transform: uppercase;
     
-    /* Efeito 3D com sombra */
+   
     box-shadow: var(--sombra-botao);
     position: relative;
     top: 0;
@@ -79,7 +77,7 @@ body {
 }
 
 .botao-flutuante:active {
-    /* Efeito de "clique" que abaixa o botão */
+    /* Efeito de clique*/
     top: 5px;
     box-shadow: 0 0 0 var(--deep-mahogany);
 }
@@ -88,8 +86,6 @@ body {
     margin-right: 5px;
 }
 
-
-/* ================== MAPA DE ILHAS ================== */
 
 .container-mapa {
     max-width: 1200px;
@@ -115,7 +111,7 @@ body {
 
  
     
-    /* Inicia a animação de flutuação */
+    /* Inicia a animação */
     animation: flutuar 4s infinite ease-in-out;
 }
 
@@ -186,7 +182,8 @@ body {
         gap: 10px;
     }
     
-    /* Para telas menores, as ilhas são empilhadas e centralizadas */
+    /*deixa empilhado*/
+    
     .mapa-ilhas {
         display: flex;
         flex-direction: column;
@@ -195,9 +192,9 @@ body {
     }
     
     .ilha {
-        position: relative; /* Remove a posição absoluta */
+        position: relative; 
         margin-bottom: 40px;
-        width: 180px; /* Tamanho uniforme */
+        width: 180px; 
         top: auto;
         left: auto;
         right: auto;
