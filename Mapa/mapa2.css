@@ -31,7 +31,7 @@ body {
     text-align: center;
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
     z-index: 10;
-    position: relative; /* Para garantir que a sombra fique visível */
+    position: relative; 
 }
 
 .cabecalho h1 {
@@ -132,7 +132,7 @@ body {
 .ilha-1 {
     width: 200px;
     top: 15px;
-    left: 10%;
+    left: 0%;
     transform: translateY(0);
     animation-delay: 0s;
 }
@@ -146,17 +146,17 @@ body {
 }
 
 .ilha-3 { 
-    width: 150px;
-    top: 180px;
-    left: 60%;
+    width: 450px;
+    top: 140px;
+    left: 50%;
     transform: translateY(0);
     animation-delay: 3s;
 }
 
 .ilha-4 { 
-    width: 250px;
+    width: 270px;
     top: 100px;
-    left: 35%;
+    left: 25%;
     transform: translateY(0);
     animation-delay: 0.5s;
 }
@@ -168,35 +168,5 @@ body {
     }
     50% {
         transform: translateY(-15px);
-    }
-}
-
-
-/* Responsividade Básica */
-@media (max-width: 768px) {
-    .cabecalho h1 {
-        font-size: 1.5em;
-    }
-    .botoes-cabecalho {
-        flex-direction: column;
-        gap: 10px;
-    }
-    
-    /*deixa empilhado*/
-    
-    .mapa-ilhas {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        min-height: auto;
-    }
-    
-    .ilha {
-        position: relative; 
-        margin-bottom: 40px;
-        width: 180px; 
-        top: auto;
-        left: auto;
-        right: auto;
     }
 }
