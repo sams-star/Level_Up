@@ -1,10 +1,7 @@
 :root {
-    --pine-bark: #352E1F;       
-    --soft-leather: #5E3D20;   
-    --dull-chestnut: #94724A;   
-    --windy-dunes: #CCB693;     
-    --olive-grove: #787350;   
-    --deep-mahogany: #481911;   
+    --marrom-pinheiro: #352E1F;          
+    --amarelo-areia: #CCB693;       
+    --marrom-vinho: #481911;   
     
     --sombra-ilha: 0 15px 25px rgba(0, 0, 0, 0.5); 
     --sombra-botao: 0 5px 0 var(--deep-mahogany); 
@@ -26,7 +23,7 @@ body {
 
 
 .cabecalho {
-    background-color: var(--pine-bark); 
+    background-color: var(--marrom-pinheiro); 
     padding: 40px 20px 20px;
     text-align: center;
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
@@ -37,7 +34,7 @@ body {
 .cabecalho h1 {
     font-size: 2em;
     margin-bottom: 10px;
-    color: var(--windy-dunes);
+    color: var(--amarelo-areia);
 }
 
 .cabecalho p {
@@ -55,11 +52,11 @@ body {
 .botao-flutuante {
     display: inline-block;
     padding: 10px 20px;
-    background-color: var(--windy-dunes);
-    color: var(--pine-bark);
+    background-color: var(--amarelo-areia);
+    color: var(--marrom-pinheiro);
     text-decoration: none;
     font-size: 0.7em;
-    border: 3px solid var(--deep-mahogany);
+    border: 3px solid var(--marrom-vinho);
     border-radius: 8px;
     cursor: pointer;
     text-transform: uppercase;
@@ -73,13 +70,13 @@ body {
 
 .botao-flutuante:hover {
     background-color: white; 
-    color: var(--deep-mahogany);
+    color: var(--marrom-vinho);
 }
 
 .botao-flutuante:active {
    
     top: 5px;
-    box-shadow: 0 0 0 var(--deep-mahogany);
+    box-shadow: 0 0 0 var(--marrom-vinho);
 }
 
 .botao-flutuante i.fas {
@@ -87,7 +84,7 @@ body {
 }
 
 
-.container-mapa {
+.mapa {
     max-width: 1200px;
     margin: 50px auto;
     padding: 20px;
