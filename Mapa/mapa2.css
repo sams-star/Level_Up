@@ -99,20 +99,31 @@ body {
 }
 
 .ilha {
-    position: absolute;
-    display: block;
-    cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    
-
- 
-    
-    animation: flutuar 4s infinite ease-in-out;
+  position: absolute;
+  display: block;
+  cursor: pointer;
+  transition: transform 0.6s ease-in-out, filter 0.4s ease, box-shadow 0.4s ease;
+  animation: flutuar 4s infinite ease-in-out;
+  transform-origin: center center; /* cresce do centro */
 }
 
+/* Quando o mouse passa */
 .ilha:hover {
-    transform: scale(1.1) translateY(0px) !important; 
-    
+  transform: scale(1.3) translateY(-10px);
+  filter: brightness(1.2) saturate(1.3);
+  z-index: 15;
+
+  animation: respirar 2s infinite ease-in-out;
+}
+
+/* Efeito “respirando” (cresce e encolhe suavemente) */
+@keyframes respirar {
+  0%, 100% {
+    transform: scale(1.3) translateY(-10px);
+  }
+  50% {
+    transform: scale(1.35) translateY(-12px);
+  }
 }
 
 .ilha img {

@@ -41,7 +41,7 @@ body {
         cursor: pointer;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
         transition: transform 0.25s ease, box-shadow 0.25s ease;
-        background-image: url('../Level_Up/Imagens/personagem_rebeca.png'); 
+        background-image: url('../../Imagens/logo_do_site.PNG'); 
         background-size: cover; 
         background-position: center; 
 

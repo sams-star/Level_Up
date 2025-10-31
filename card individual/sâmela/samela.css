@@ -27,7 +27,7 @@ body {
         cursor: pointer;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
         transition: transform 0.25s ease, box-shadow 0.25s ease;
-        background-image: url('../Level_Up/Imagens/personagem_rebeca.png'); 
+        background-image: url('../../Imagens/logo_do_site.PNG'); 
         background-size: cover; 
         background-position: center; 
 
@@ -173,17 +173,27 @@ body {
   font-size: 0.9rem;
 }
 
+
+
 .logos {
   display: flex;
   justify-content: center;
-  gap: 10px;
+  align-items: center;
+  gap: 15px;         
   margin-top: 20px;
-  height: 10vh;
-  width: auto;
-
 }
 
-#logo-html{
-left: 20%;
+.logos img {
+  height: 12vh;      
+  width: auto;       
+  object-fit: contain;
 }
 
+#logo-js {
+  position: relative;
+  top: -4px;
+}
+
+#logo-html {
+  transform: scale(1.10);
+}
