@@ -200,13 +200,6 @@ body {
     background-color: var(--cor-fundo);
 }
 
-
-.icone-expansao {
-    margin-left: 15px;
-    transition: transform 0.3s;
-}
-
-
 .conteudo-escondido {
     padding: 0 25px;
     background-color: white;

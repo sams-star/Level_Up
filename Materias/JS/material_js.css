@@ -112,14 +112,13 @@ body {
 .imagem-lateral {
     margin-bottom: 40px;
     position: fixed; 
-    top: 30%; 
-    transform: tr10anslateY(0%); 
+    top: 35%;  
     transform: translateX(50%);
-     animation: flutuarImagem 4s ease-in-out infinite; 
+    animation: flutuarImagem 4s ease-in-out infinite; 
 }
 
 .imagem-lateral img {
-    width: 55vh;;
+    width: 55vh;
     height: auto;
 
 }
@@ -151,7 +150,6 @@ body {
 
 .cabecalho p {
     font-size: 1.1em;
-    opacity: 0.9;
 }
 
 .container {
@@ -200,11 +198,6 @@ body {
 
 .barra-titulo:hover {
     background-color: var(--cor-fundo);
-}
-
-.icone-expansao {
-    margin-left: 15px;
-    transition: transform 0.3s;
 }
 
 

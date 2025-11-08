@@ -17,7 +17,6 @@ button {
     background-color: #000000;
     color: #2bff00;
     border: none;
-    border-radius: px;
     cursor: pointer;
     box-shadow: 0 4px 10px rgba(0,0,0,0.3);
     animation: mexer 1s infinite ease-in-out;
