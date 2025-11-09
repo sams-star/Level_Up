@@ -27,7 +27,6 @@ body {
     padding: 40px 20px 20px;
     text-align: center;
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
-    z-index: 10;
     position: relative; 
 }
 
