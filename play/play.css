@@ -1,0 +1,55 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background: url('../Imagens/paisagem_play.png') no-repeat center center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Press Start 2P', monospace;
+}
+
+
+.container {
+  text-align: center;
+}
+
+
+.title {
+    top: 2010px;
+  color: white;
+  font-size: 52px;
+  line-height: 1.2;
+  text-shadow: 2px 2px 4px #000;
+  font-family: 'Press Start 2P', monospace;
+}
+
+
+.title span {
+  display: block;
+  font-size: 58px;
+  color: #fff;
+}
+
+.start-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 25px 50px;
+  font-size: 35px;
+  color: white;
+  background-color: #352E1F;
+  border: 1px solid white;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  text-shadow: 1px 1px 3px #000;
+}
+
+
+.start-btn:hover {
+  background-color: white;
+  color: black;
+  transform: scale(1.1);
+}
