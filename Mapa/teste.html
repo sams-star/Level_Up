@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mapa do Jogo</title>
+
+<!-- Fonte -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+<style>
+:root {
+  --marrom-pinheiro: #352E1F;
+  --amarelo-areia: #CCB693;
+  --marrom-vinho: #481911;
+}
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BODY */
+body {
+  background-image: url(../Imagens/nuvens.gif);
+  font-family: 'Press Start 2P', monospace;
+  min-height: 100vh;
+  line-height: 1.6;
+}
+
+/* CABEÇALHO */
+.cabecalho {
+  background-color: var(--marrom-pinheiro);
+  padding: 40px 20px 20px;
+  text-align: center;
+  box-shadow: 0 8px 15px rgba(0,0,0,0.4);
+}
+
+.cabecalho h1 {
+  font-size: 2em;
+  color: var(--amarelo-areia);
+}
+
+.cabecalho p {
+  font-size: 0.8em;
+  opacity: 0.8;
+  margin: 15px 0 30px;
+}
+
+.botoes-cabecalho {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* BOTÕES */
+.botao-flutuante {
+  padding: 10px 20px;
+  background-color: var(--amarelo-areia);
+  color: var(--marrom-pinheiro);
+  text-decoration: none;
+  font-size: 0.7em;
+  border: 3px solid var(--marrom-vinho);
+  border-radius: 8px;
+  box-shadow: 0 5px 0 var(--marrom-vinho);
+  transition: all 0.1s;
+}
+
+.botao-flutuante:active {
+  transform: translateY(5px);
+  box-shadow: 0 0 0 var(--marrom-vinho);
+}
+
+/* MAPA */
+.mapa {
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.mapa-ilhas {
+  position: relative;
+  width: 100%;
+}
+
+/* ILHAS */
+.ilha {
+  position: absolute;
+  cursor: pointer;
+  animation: flutuar 4s infinite ease-in-out;
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.ilha img {
+  width: 100%;
+  display: block;
+}
+
+/* POSIÇÕES */
+.ilha-1 { width: 200px; top: 15px; left: 0%; }
+.ilha-2 { width: 250px; top: 0px; right: 5%; }
+.ilha-3 { width: 300px; top: 140px; left: 50%; }
+.ilha-4 { width: 270px; top: 100px; left: 25%; }
+
+/* HOVER */
+.ilha:hover {
+  transform: scale(1.3) translateY(-10px);
+  z-index: 10;
+}
+
+/* ILHA VISITADA */
+.ilha.visitada img {
+  filter: grayscale(90%) brightness(0.75);
+  opacity: 0.8;
+}
+
+/* ANIMAÇÃO */
+@keyframes flutuar {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+</style>
+</head>
+
+<body>
+
+<header class="cabecalho">
+  <h1>Mapa da Aventura: Ilhas do Conhecimento Web</h1>
+  <p>Navegue pelas ilhas flutuantes para descobrir novas linguagens!</p>
+
+  <div class="botoes-cabecalho">
+    <a href="../Start Game/Start_Game.html" class="botao-flutuante">
+      <i class="fas fa-compass"></i> Exit
+    </a>
+    <a href="../Card/card.html" class="botao-flutuante">
+      <i class="fas fa-book-open"></i> Personagens
+    </a>
+  </div>
+</header>
+
+<main class="mapa">
+  <div class="mapa-ilhas">
+
+    <a href="../Materias/HTML/material_html.html"
+       class="ilha ilha-1"
+       data-ilha="html"
+       title="Ilha HTML">
+      <img src="../Imagens/ilhahtml-removebg-preview.png">
+    </a>
+
+    <a href="#"
+       class="ilha ilha-2"
+       data-ilha="final"
+       title="Ilha Final">
+      <img src="../Imagens/ilha_final-removebg-preview (1).png">
+    </a>
+
+    <a href="../Materias/JS/material_js.html"
+       class="ilha ilha-3"
+       data-ilha="js"
+       title="Ilha JavaScript">
+      <img src="../Imagens/ilha_js-removebg-preview.png">
+    </a>
+
+    <a href="../Materias/CSS/material_css.html"
+       class="ilha ilha-4"
+       data-ilha="css"
+       title="Ilha CSS">
+      <img src="../Imagens/ilha_css-removebg-preview.png">
+    </a>
+
+  </div>
+</main>
+
+<script>
+  document.querySelectorAll('.ilha').forEach(ilha => {
+    const id = ilha.dataset.ilha;
+
+    // Aplica estado visitado ao carregar
+    if (localStorage.getItem(`ilha-${id}`) === 'visitada') {
+      ilha.classList.add('visitada');
+    }
+
+    // Marca como visitada ao clicar
+    ilha.addEventListener('click', () => {
+      localStorage.setItem(`ilha-${id}`, 'visitada');
+    });
+  });
+</script>
+
+</body>
+</html>
