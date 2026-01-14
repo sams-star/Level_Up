@@ -239,5 +239,87 @@ body {
 }
 
 
+@media (max-width: 768px) {
+
+  
+  .menu {
+    top: 15px;
+    left: 15px;
+  }
+
+  .menu-button {
+    width: 45px;
+    height: 45px;
+  }
+
+  .menu-options a {
+    font-size: 12px;
+    padding: 8px 14px;
+  }
+
+  
+  .cabecalho {
+    padding: 25px 15px;
+  }
+
+  .cabecalho h1 {
+    font-size: 1.4em;
+  }
+
+  .cabecalho p {
+    font-size: 0.7em;
+  }
+  .menu {
+    top: 15px;
+    left: 15px;
+  }
+
+  .menu-button {
+    width: 45px;
+    height: 45px;
+    margin-top: 5vh;
+  }
+  
+  .imagem-lateral {
+    position: static;
+    transform: none;
+    animation: none;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+    }
+
+  .imagem-lateral img {
+    width: 220px;
+  }
+
+  
+  .container {
+    max-width: 100%;
+    margin: 0;
+    padding: 0 15px;
+    float: none;
+  }
+
+
+  .bloco-conteudo {
+    margin-top: 25px;
+    padding: 15px;
+  }
+
+  .barra-titulo {
+    font-size: 0.8em;
+    padding: 14px;
+  }
+
+  .conteudo-escondido {
+    font-size: 0.75em;
+  }
+
+  
+  .conteudo-escondido li {
+    margin-bottom: 8px;
+  }
+}
 
 

@@ -196,3 +196,116 @@ body {
 #logo-html {
   transform: scale(1.10);
 }
+
+
+/* ===================================== */
+/* 🎮 RESPONSIVIDADE – GAME UI MOBILE */
+/* ===================================== */
+@media (max-width: 768px) {
+
+  body {
+    overflow-x: hidden;
+  }
+
+  /* MENU FIXO E LIMPO */
+  .menu {
+    top: 12px;
+    left: 12px;
+  }
+
+  .menu-button {
+    width: 42px;
+    height: 42px;
+  }
+
+  /* CONTAINER VIRA TELA */
+  .container {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: auto;
+    padding-top: 14vh;
+    gap: 0;
+  }
+
+  /* PERSONAGEM COMO HERO */
+  .personagem {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin-bottom: -60px;
+    z-index: 2;
+  }
+
+  .img-personagem {
+    position: relative;
+    width: 85vw;
+    max-width: 320px;
+    transform: none;
+    filter: drop-shadow(0 12px 18px rgba(0,0,0,0.45));
+  }
+
+  /* CARD COMO PAINEL */
+  .card {
+    width: 92%;
+    max-width: 380px;
+    padding: 90px 20px 24px;
+    margin: 0;
+    border-radius: 20px;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.35);
+    text-align: center;
+  }
+
+  /* TÍTULOS */
+  .card-titulo {
+    font-size: 2.2rem;
+  }
+
+  .titulo {
+    font-size: 0.7rem;
+    margin-bottom: 10px;
+  }
+
+  
+  .label {
+    font-size: 0.75rem;
+    margin-top: 20px;
+  }
+
+  
+  .xp-barra {
+    height: 10px;
+    border-radius: 6px;
+  }
+
+  .xp-texto {
+    font-size: 0.6rem;
+  }
+
+  
+  .conquistas-titulo {
+    font-size: 0.7rem;
+    margin-top: 28px;
+  }
+
+  /* LOGOS */
+  .logos {
+    justify-content: center;
+    gap: 12px;
+    margin-top: 14px;
+  }
+
+  .logos img {
+    height: 42px;
+  }
+
+  /* REMOVE DESLOCAMENTOS DESKTOP */
+  #samela,
+  #sophia,
+  #rebeca {
+    width: auto;
+    height: auto;
+    transform: none;
+  }
+}

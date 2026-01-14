@@ -168,3 +168,63 @@ body {
         transform: translateY(-15px);
     }
 }
+
+
+@media (max-width: 768px) {
+
+  
+  .cabecalho {
+    padding: 25px 15px;
+  }
+
+  .cabecalho h1 {
+    font-size: 1.1em;
+  }
+
+  .cabecalho p {
+    font-size: 0.6em;
+    margin-bottom: 20px;
+  }
+
+  
+  .botoes-cabecalho {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .botao-flutuante {
+    font-size: 0.6em;
+    padding: 10px;
+  }
+
+  
+  .mapa {
+    margin: 20px auto;
+    padding: 10px;
+  }
+
+  .mapa-ilhas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    position: static;
+  }
+
+  
+  .ilha {
+    position: static;
+    animation: flutuar 3s infinite ease-in-out;
+  }
+
+  .ilha img {
+    width: 180px;
+  }
+
+  /* REMOVE HOVER EXAGERADO NO MOBILE */
+  .ilha:hover {
+    transform: scale(1.1);
+    animation: none;
+  }
+}
+
