@@ -168,7 +168,7 @@ body {
         transform: translateY(-15px);
     }
 }
-console.log
+
 
 @media (max-width: 768px) {
 
@@ -225,6 +225,6 @@ console.log
   .ilha:hover {
     transform: scale(1.1);
     animation: none;
-  }
-}
+  }}
+
 
