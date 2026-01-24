@@ -227,4 +227,38 @@ body {
     animation: none;
   }}
 
+  @media (min-width: 768px) and (max-width: 1366px) {
+
+  .mapa {
+    margin: 30px auto;
+    padding: 10px;
+  }
+
+  .mapa-ilhas {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto auto;
+    gap: 40px;
+    justify-items: center;
+    align-items: center;
+    position: relative;
+  }
+
+  .ilha {
+    position: relative;
+    animation: flutuar 4s infinite ease-in-out;
+  }
+
+  .ilha-1,
+  .ilha-2,
+  .ilha-3,
+  .ilha-4 {
+    top: auto;
+    left: auto;
+    right: auto;
+    width: 220px;
+  }
+}
+
+
 

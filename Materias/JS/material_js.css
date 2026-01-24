@@ -321,5 +321,36 @@ body {
     margin-bottom: 8px;
   }
 }
+@media (min-width: 768px) and (max-width: 1366px) {
 
+.imagem-lateral {
+        position: static;
+        transform: none;
+        animation: none;
+        display: flex;
+        justify-content: center;
+        margin: 20px 0;
+        }
+    
+    .imagem-lateral img {
+        width: 220px;
+    }
+    
+    
+    .container {
+        max-width: 100%;
+        margin: 0;
+        padding: 0 15px;
+        float: none;
+    }
+    .menu {
+    top: 20px;
+    left: 20px;
+  }
 
+  .menu-button {
+    width: 70px;
+    height: 70px;
+
+}
+}
