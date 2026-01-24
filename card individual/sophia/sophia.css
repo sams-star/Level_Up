@@ -193,3 +193,52 @@ body {
 #logo-html {
   transform: scale(1.10);
 }
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column-reverse; 
+        height: auto;
+        padding: 40px 20px;
+        gap: 20px;
+    }
+
+    .img-personagem {
+        position: static;
+        width: 80vw;
+        max-width: 300px;
+        transform: none;
+        margin: 0 auto;
+        display: block;
+    }
+
+    
+    .card {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+        padding: 40px 20px;
+        margin-right: 0; 
+        box-sizing: border-box;
+    }
+
+    .card-titulo {
+        font-size: 2rem;
+    }
+
+    .label {
+        margin-top: 20px;
+        font-size: 0.8rem;
+    }
+
+    .xp-barra {
+        margin-top: 20px;
+    }
+
+    .conquistas-titulo {
+        margin-top: 30px;
+    }
+
+    .logos img {
+        height: 40px;
+    }
+}

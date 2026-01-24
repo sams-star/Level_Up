@@ -1,103 +1,89 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
+
 body {
-  margin: 0;
-  padding: 0;
-  height: 100vh;
-  background: 
-    radial-gradient(circle at center, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.8) 100%),
-    url('../Imagens/paisagem_play.png') no-repeat center center;
-  background-size: cover;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: 'Press Start 2P', monospace;
-  overflow: hidden;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Press Start 2P', monospace;
+    overflow: hidden;
+    background: 
+        radial-gradient(circle, rgba(40,30,10,0.3), #000 100%),
+        url('../Imagens/ilhas_site.jpeg') no-repeat center/cover;
 }
 
-/* Container central */
 .container {
-  text-align: center;
-  animation: fadeIn 2s ease-out;
+    text-align: center;
+    animation: desaparecer 2s ease-out;
 }
 
-/* Animação de entrada suave */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: scale(0.95);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
 
-/* Título principal */
 .title {
-  color: #fff;
-  font-size: 60px;
-  line-height: 1.3;
-  text-shadow: 
-    0 0 10px #fff, 
-    0 0 20px #ff9, 
-    0 0 30px #ffb347, 
-    0 0 40px #ffcc33;
-  letter-spacing: 3px;
-  margin-bottom: 60px;
-  animation: glowPulse 3s infinite ease-in-out;
+    color: #e6e6e6;
+    font-size: 60px;
+    line-height: 1.3;
+    letter-spacing: 5px;
+    margin-bottom: 60px;
+    animation: Brilho 4s infinite ease-in-out;
 }
 
-/* Animação de brilho */
-@keyframes glowPulse {
-  0%, 100% {
-    text-shadow: 0 0 10px #fff, 0 0 30px #ff9, 0 0 40px #ffb347;
-  }
-  50% {
-    text-shadow: 0 0 20px #ffe, 0 0 60px #ffd966, 0 0 80px #ffcc33;
-  }
-}
-
-/* Span (segunda linha do título) */
 .title span {
-  display: block;
-  font-size: 72px;
-  color: #ffdf80;
+    display: block;
+    font-size: 75px;
+    color: #ffcc33;
+    text-shadow: 4px 4px 0 #332b00, 0 0 20px #ffae00;
 }
 
-/* Botão Start */
+
 .start-btn {
-  display: inline-block;
-  margin-top: 30px;
-  padding: 25px 80px;
-  font-size: 30px;
-  color: #fff;
-  background: #222;
-  border: 4px solid #fff;
-  border-top: 4px solid #999;
-  border-left: 4px solid #999;
-  border-radius: 0;
-  text-decoration: none;
-  font-family: 'Press Start 2P', monospace;
-  box-shadow: 4px 4px 0 #000;
-  transition: all 0.1s ease;
-  text-shadow: none;
+    display: inline-block;
+    position: relative;
+    padding: 25px 80px;
+    font-size: 25px;
+    color: #ffcc33;
+    background: #3d2b1f;
+    text-decoration: none;
+    border: 6px solid;
+    border-color: #8b5a2b #1a0f00 #1a0f00 #8b5a2b; 
+    box-shadow: 0 10px 20px #000, inset 0 0 15px #000;
+    transition: 0.2s steps(4);
 }
 
-/* Ao passar o mouse */
+.start-btn::before, .start-btn::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: #000;
+    border-radius: 50%;
+}
+.start-btn::before { top: 8px; left: 8px; }
+.start-btn::after { bottom: 8px; right: 8px; }
+
 .start-btn:hover {
-  background: #ffffff;
-  color: #1c1a1a;
-  border: 4px solid #fff;
-  border-top: 4px solid #ccc;
-  border-left: 4px solid #ccc;
-  box-shadow: 6px 6px 0 #000;
-  transform: scale(1.1);
-  transition: all 0.1s ease;
+    background: #5c4033;
+    color: #fff;
+    transform: translateY(-5px);
+    border-color: #ffcc33;
 }
 
 
+@keyframes desaparecer {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes Brilho {
+    0%, 100% { text-shadow: 4px 4px 0 #222, 0 0 15px #ff4500; transform: scale(1); }
+    50% { text-shadow: 4px 4px 0 #222, 0 0 40px #ffae00, 0 0 60px #ff4500; transform: scale(1.03); }
+}
 
 
-
+@media (max-width: 768px) {
+    .title { font-size: 36px; margin-bottom: 40px; }
+    .title span { font-size: 42px; }
+    .start-btn { padding: 28px 65px; font-size: 26px; border-width: 4px; }
+}
 
