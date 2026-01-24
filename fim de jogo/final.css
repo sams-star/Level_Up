@@ -117,7 +117,58 @@ body {
     0% { text-shadow: 8px 8px 0 #222, 0 0 15px #ffcc33, 0 0 30px #ff9900; }
     100% { text-shadow: 8px 8px 0 #222, 0 0 25px #fff, 0 0 50px #ffcc33; }
 }
+/* Container dos Créditos */
+.credits-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Permite clicar nos botões por "trás" dos créditos */
+    z-index: 1; /* Fica entre o fundo e o card principal */
+    overflow: hidden;
+}
 
+.credits-content {
+    position: absolute;
+    width: 100%;
+    top: 100%; /* Começa embaixo da tela */
+    animation: scrollCredits 25s linear infinite; /* 25 segundos para subir tudo */
+    text-align: center;
+    opacity: 0.6; /* Deixa suave para não atrapalhar o "YOU WIN" */
+}
+
+/* Estilização dos textos dos créditos */
+.credits-content p {
+    font-size: 14px;
+    color: #ffcc33; /* Cor de ouro */
+    margin-top: 50px;
+    letter-spacing: 2px;
+}
+
+.credits-content span {
+    display: block;
+    font-size: 18px;
+    color: #fff;
+    margin-top: 10px;
+    text-shadow: 2px 2px 0 #000;
+}
+
+/* Animação que faz subir */
+@keyframes scrollCredits {
+    0% {
+        top: 100%;
+    }
+    100% {
+        top: -150%; /* Sobe até sumir completamente no topo */
+    }
+}
+
+/* Ajuste de Z-index no card principal para ele ficar na frente */
+.message-box {
+    position: relative;
+    z-index: 999; /* Garante que o card e botões fiquem clicáveis na frente */
+}
 
 /* --- RESPONSIVIDADE PARA CELULAR --- */
 @media (max-width: 768px) {
