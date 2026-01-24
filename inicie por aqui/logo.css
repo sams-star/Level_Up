@@ -2,7 +2,6 @@ body {
   margin: 0;
   padding: 0;
   background-color: black;
-  /* Garante que o fundo ocupe a tela toda */
   height: 100vh; 
   display: flex;
   align-items: center;
@@ -11,7 +10,6 @@ body {
 }
 
 video {
-  /* O vídeo ocupará a largura total no celular, mas sem ultrapassar a altura da tela */
   width: 100%;
   max-height: 100vh;
   height: auto;
@@ -19,11 +17,9 @@ video {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
-/* Ajustes específicos para telas muito pequenas ou orientações diferentes */
 @media (max-width: 768px) {
   video {
     width: 100vw;
-    /* Se o vídeo for cinematográfico (21:9), isso garante que ele centralize */
     object-fit: contain; 
   }
 }
