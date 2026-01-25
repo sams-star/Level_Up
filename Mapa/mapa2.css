@@ -16,7 +16,6 @@
 body {
     background-image:url(../Imagens/nuvens.gif);
     font-family: 'Press Start 2P', monospace;
-    color: var(--windy-dunes);
     min-height: 100vh;
     line-height: 1.6;
 }
@@ -220,8 +219,7 @@ body {
   .ilha img {
     width: 180px;
   }
-
-  /* REMOVE HOVER EXAGERADO NO MOBILE */
+  
   .ilha:hover {
     transform: scale(1.1);
     animation: none;
