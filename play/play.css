@@ -16,7 +16,7 @@ body {
 
 .container {
     text-align: center;
-    animation: desaparecer 2s ease-out;
+    animation: aparecer 2s ease-out;
 }
 
 
@@ -51,16 +51,6 @@ body {
     transition: 0.2s steps(4);
 }
 
-.start-btn::before, .start-btn::after {
-    content: '';
-    position: absolute;
-    width: 6px;
-    height: 6px;
-    background: #000;
-    border-radius: 50%;
-}
-.start-btn::before { top: 8px; left: 8px; }
-.start-btn::after { bottom: 8px; right: 8px; }
 
 .start-btn:hover {
     background: #5c4033;
@@ -70,7 +60,7 @@ body {
 }
 
 
-@keyframes desaparecer {
+@keyframes aparecer {
     from { opacity: 0; transform: scale(0.95); }
     to { opacity: 1; transform: scale(1); }
 }
