@@ -10,7 +10,7 @@ body {
     overflow: hidden;
     background: 
         radial-gradient(circle, rgba(20, 10, 0, 0.4), rgba(0,0,0,0.9) 100%),
-        url('../Imagens/ilhas_site.jpeg') no-repeat center/cover; /* Reutilizando sua imagem de fundo */
+        url('../Imagens/ilhas_site.jpeg') no-repeat center/cover; 
     color: #fff;
     text-align: center;
 }
@@ -21,27 +21,27 @@ body {
 }
 
 .message-box {
-    background-color: rgba(40, 30, 10, 0.8); /* Fundo de madeira escura semi-transparente */
-    border: 5px solid #6b421e; /* Borda de madeira */
+    background-color: rgba(40, 30, 10, 0.8); 
+    border: 5px solid #6b421e; 
     border-top-color: #916139;
     border-left-color: #916139;
     border-bottom-color: #352310;
     border-right-color: #352310;
     padding: 40px 60px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.7), inset 0 0 20px rgba(0,0,0,0.5);
-    display: inline-block; /* Para o box-shadow funcionar bem com a borda */
-    transform: scale(0.9); /* Inicia um pouco menor */
-    animation: popIn 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) forwards 0.5s; /* Animação de "explosão" */
-    opacity: 0; /* Inicia invisível para a animação */
+    display: inline-block; 
+    transform: scale(0.9); 
+    animation: popIn 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) forwards 0.5s; 
+    opacity: 0; 
 }
 
 .game-over-text {
-    font-size: 80px; /* Grande como nos jogos arcade! */
-    color: #ffe700; /* Dourado vibrante */
+    font-size: 80px;
+    color: #ffe700;
     text-shadow: 
-        8px 8px 0 #222, /* Borda grossa preta para o pixel art */
-        0 0 15px #ffcc33, /* Brilho amarelo */
-        0 0 30px #ff9900; /* Brilho laranja */
+        8px 8px 0 #222, 
+        0 0 15px #ffcc33, 
+        0 0 30px #ff9900; 
     margin-bottom: 30px;
     letter-spacing: 5px;
     animation: textGlow 1.5s infinite alternate ease-in-out;
@@ -54,12 +54,12 @@ body {
     letter-spacing: 2px;
 }
 
-/* --- ESTILO DOS BOTÕES --- */
+
 .restart-btn,
 .exit-btn {
-    display: block; /* Cada botão em sua própria linha */
+    display: block; 
     width: fit-content;
-    margin: 25px auto 15px auto; /* Centraliza e adiciona espaço */
+    margin: 25px auto 15px auto; 
     padding: 15px 40px;
     font-size: 18px;
     text-decoration: none;
@@ -67,7 +67,7 @@ body {
     transition: all 0.1s ease;
     cursor: pointer;
 
-    /* Estilo de botão "pixelado" de madeira/metal */
+    
     border: 4px solid;
     border-top-color: #b38b6d;
     border-left-color: #b38b6d;
@@ -77,7 +77,7 @@ body {
 }
 
 .restart-btn {
-    background-color: #4a6e3d; /* Verde escuro para "Play Again" */
+    background-color: #4a6e3d; 
     color: #d4e7cd;
 }
 
@@ -89,7 +89,7 @@ body {
 }
 
 .exit-btn {
-    background-color: #6b421e; /* Marrom para "Exit" */
+    background-color: #6b421e; 
     color: #ffe700;
 }
 
@@ -117,31 +117,31 @@ body {
     0% { text-shadow: 8px 8px 0 #222, 0 0 15px #ffcc33, 0 0 30px #ff9900; }
     100% { text-shadow: 8px 8px 0 #222, 0 0 25px #fff, 0 0 50px #ffcc33; }
 }
-/* Container dos Créditos */
+
 .credits-container {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    pointer-events: none; /* Permite clicar nos botões por "trás" dos créditos */
-    z-index: 1; /* Fica entre o fundo e o card principal */
+    pointer-events: none; 
+    z-index: 1; 
     overflow: hidden;
 }
 
 .credits-content {
     position: absolute;
     width: 100%;
-    top: 100%; /* Começa embaixo da tela */
-    animation: scrollCredits 25s linear infinite; /* 25 segundos para subir tudo */
+    top: 100%; 
+    animation: scrollCredits 25s linear infinite; 
     text-align: center;
-    opacity: 0.6; /* Deixa suave para não atrapalhar o "YOU WIN" */
+    opacity: 0.6; 
 }
 
-/* Estilização dos textos dos créditos */
+
 .credits-content p {
     font-size: 14px;
-    color: #ffcc33; /* Cor de ouro */
+    color: #ffcc33; 
     margin-top: 50px;
     letter-spacing: 2px;
 }
@@ -154,28 +154,28 @@ body {
     text-shadow: 2px 2px 0 #000;
 }
 
-/* Animação que faz subir */
+
 @keyframes scrollCredits {
     0% {
         top: 100%;
     }
     100% {
-        top: -150%; /* Sobe até sumir completamente no topo */
+        top: -150%; 
     }
 }
 
-/* Ajuste de Z-index no card principal para ele ficar na frente */
+
 .message-box {
     position: relative;
-    z-index: 999; /* Garante que o card e botões fiquem clicáveis na frente */
+    z-index: 999; 
 }
 
-/* --- RESPONSIVIDADE PARA CELULAR --- */
+
 @media (max-width: 768px) {
     .message-box {
         padding: 30px 20px;
-        width: 90%; /* Ocupa quase a largura toda */
-        box-sizing: border-box; /* Garante que padding e border não aumentem a largura */
+        width: 90%; 
+        box-sizing: border-box; 
     }
 
     .game-over-text {
