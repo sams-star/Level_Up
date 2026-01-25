@@ -1,0 +1,42 @@
+body {
+    background-image: url("../Imagens/Glitch.gif");
+}
+.Start_game {
+    font-family: 'Press Start 2P', monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    
+}
+
+button {
+    padding: 20px 40px;
+    font-family: 'Press Start 2P', monospace;
+    font-size: 24px;
+    background-color: #000000;
+    color: #2bff00;
+    border: none;
+    border-radius: px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    animation: mexer 1s infinite ease-in-out;
+}
+
+@keyframes mexer {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-10px);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+}
+
+button:hover {
+  background-color: #fff;
+  color: #000;
+  transform: scale(1.1);
+}
